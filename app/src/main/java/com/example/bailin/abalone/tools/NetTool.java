@@ -55,7 +55,7 @@ public class NetTool {
         }
     }
 
-    // 网络请求的接口，有成功方法， 有失败方法
+
     public interface NetInterface<T> {
         void onSuccess(T t); // 网络请求成功 返回的是解析完成的实体类
     }

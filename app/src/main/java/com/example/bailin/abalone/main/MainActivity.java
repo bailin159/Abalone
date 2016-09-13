@@ -57,7 +57,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         switch (i) {
             case R.id.rb_news:
                 fragmentTransaction.replace(R.id.fragment_id, new NewsFragment());
