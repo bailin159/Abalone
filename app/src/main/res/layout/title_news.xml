@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/news_title_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/blue" />
+
+    <TextView
+        android:id="@+id/title_tv_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+        android:text="爆娱"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
