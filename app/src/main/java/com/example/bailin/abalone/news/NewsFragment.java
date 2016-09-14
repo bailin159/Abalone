@@ -12,6 +12,7 @@ import com.example.bailin.abalone.baseclass.BaseFragment;
 import java.util.ArrayList;
 
 /**
+ * 新闻界面
  * Created by 车鹏昌 on 16/9/13.
  */
 public class NewsFragment extends BaseFragment {
@@ -32,8 +33,9 @@ public class NewsFragment extends BaseFragment {
     @Override
     protected void initData() {
         datas=new ArrayList<>();
+        datas.add(new NewsGirlFragment());//娱乐
         datas.add(new NewsALLFragment());//全部
-        datas.add(new NewsGirlFragment());//美女
+
          NewTabAdapter newTabAdapter =new NewTabAdapter(getChildFragmentManager(),datas);
         newsViewPager.setAdapter(newTabAdapter);
         newsTabLayout.setupWithViewPager(newsViewPager);

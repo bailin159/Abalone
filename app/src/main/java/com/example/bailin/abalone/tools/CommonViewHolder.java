@@ -4,6 +4,7 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -62,4 +63,5 @@ public class CommonViewHolder {
         TextView textView = getView(id);
         textView.setText(text);
     }
+
 }

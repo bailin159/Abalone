@@ -18,8 +18,8 @@ public class NewTabAdapter extends FragmentPagerAdapter {
         super(fm);
         this.data = data;
         title=new ArrayList<>();
-        title.add("全部");
-        title.add("美女");
+        title.add("娱乐");
+        title.add("头条");
     }
 
     @Override
