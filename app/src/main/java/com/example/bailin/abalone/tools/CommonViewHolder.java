@@ -4,7 +4,10 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 /**
  * Created by 白霖 on 16/9/13.
@@ -21,11 +24,11 @@ public class CommonViewHolder {
         return convertView;
     }
 
-    public static CommonViewHolder getHolder (View convertView , LayoutInflater inflater ,
-                                              int id , ViewGroup parent) {
+    public static CommonViewHolder getHolder(View convertView, LayoutInflater inflater,
+                                             int id, ViewGroup parent) {
         CommonViewHolder viewHolder;
         if (convertView == null) {
-            View view = inflater.inflate(id , parent ,false);
+            View view = inflater.inflate(id, parent, false);
             viewHolder = new CommonViewHolder(view);
         } else {
             viewHolder = (CommonViewHolder) convertView.getTag();
@@ -43,23 +46,30 @@ public class CommonViewHolder {
 
     /**
      * 通过id来获得行布局里指定的View的方法
-     * @param id  View的id
+     *
+     * @param id View的id
      * @return 该id所对应的view
      */
-    public <T extends View> T  getView(int id) {
+    public <T extends View> T getView(int id) {
         View view = views.get(id);
         if (view == null) {
             //  TODO 将要做的工作 标注出来
             //执行findViewById 找到这个组件, 然后放到views里面;
             view = convertView.findViewById(id);
-            views.put(id , view);
+            views.put(id, view);
         }
         return (T) view;
     }
 
     // 设置文字
-    public void setText (int id ,String text) {
+    public void setText(int id, String text) {
         TextView textView = getView(id);
         textView.setText(text);
+    }
+
+    // 设置图片
+    public void setImage(String imgUrl, int id) {
+        ImageView imageView = getView(id);
+        Glide.with(MyApp.getContext()).load(imgUrl).into(imageView);
     }
 }
