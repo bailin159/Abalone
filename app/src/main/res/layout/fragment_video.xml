@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#4F4F4F">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="170dp"
+            android:gravity="center_vertical"
+            android:text="爆娱"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/video_area_et"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="地址"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+    </LinearLayout>
+
+<<<<<<< HEAD
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+=======
+>>>>>>> feature/LSR-视频
 
 </LinearLayout>
