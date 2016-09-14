@@ -14,6 +14,10 @@
 
     </FrameLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D4D4D4"/>
     <RadioGroup
         android:id="@+id/rg_id"
         android:layout_width="match_parent"
