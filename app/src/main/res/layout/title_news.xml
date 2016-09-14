@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
+    android:background="#123456"
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/news_title_image"
@@ -17,10 +17,10 @@
         android:id="@+id/title_tv_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
-        android:text="爆娱"
+        android:text="爆娱大事件"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
 
