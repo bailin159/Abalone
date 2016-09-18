@@ -1,7 +1,6 @@
 package com.example.bailin.abalone.news;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.bailin.abalone.R;
+import com.example.bailin.abalone.tools.MyApp;
 
 import java.util.ArrayList;
 
@@ -59,8 +60,9 @@ public class NewsGirlAdapter extends BaseAdapter {
         }
         holder.tvTitle.setText(data.getT1348648517839().get(i).getTitle());
         holder.tvTime.setText(data.getT1348648517839().get(i).getLmodify());
-        holder.tvName.setText(data.getT1348648517839().get(i).getSource());
-        holder.tvName.setTextColor(Color.rgb(85,164,255));
+//        holder.tvName.setText(data.getT1348648517839().get(i).getSource());
+
+        Glide.with(MyApp.getContext()).load(data.getT1348648517839().get(i).getImgsrc()).into(holder.imageView);
         return view;
     }
     private class MyViewHolder{
@@ -72,6 +74,7 @@ public class NewsGirlAdapter extends BaseAdapter {
             tvName = (TextView) view.findViewById(R.id.tv_writer_news);
             tvTime = (TextView) view.findViewById(R.id.tv_tag_news);
             tvTitle = (TextView) view.findViewById(R.id.tv_title_news);
+
         }
     }
 }

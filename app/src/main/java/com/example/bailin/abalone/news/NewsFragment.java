@@ -39,6 +39,8 @@ public class NewsFragment extends BaseFragment {
          NewTabAdapter newTabAdapter =new NewTabAdapter(getChildFragmentManager(),datas);
         newsViewPager.setAdapter(newTabAdapter);
         newsTabLayout.setupWithViewPager(newsViewPager);
+        //设置选定的标签显示颜色
+        newsTabLayout.setSelectedTabIndicatorColor(Color.GRAY);
         //改变选中字体的颜色
        newsTabLayout.setTabTextColors(Color.rgb(0x98, 0x9d, 0xa8), Color.rgb(0x6c, 0x8f, 0xff));
     }
