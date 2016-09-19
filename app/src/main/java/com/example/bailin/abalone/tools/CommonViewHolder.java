@@ -67,12 +67,10 @@ public class CommonViewHolder {
         textView.setText(text);
     }
 
-<<<<<<< HEAD
+
     // 设置图片
     public void setImage(String imgUrl, int id) {
         ImageView imageView = getView(id);
         Glide.with(MyApp.getContext()).load(imgUrl).into(imageView);
     }
-=======
->>>>>>> feature/CPC-新闻
 }
