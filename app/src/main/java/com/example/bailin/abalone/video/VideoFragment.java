@@ -1,34 +1,25 @@
 package com.example.bailin.abalone.video;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.widget.EditText;
-import android.widget.ImageView;
+import android.widget.RadioGroup;
 
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseFragment;
-import com.example.bailin.abalone.bean.video.RecentlyFilmBean;
-import com.example.bailin.abalone.tools.CommonViewHolder;
-import com.example.bailin.abalone.tools.MyApp;
-import com.example.bailin.abalone.tools.NetTool;
-import com.example.bailin.abalone.tools.RecycleViewAdapter;
+import com.example.bailin.abalone.bean.video.DataEvent;
+import com.example.bailin.abalone.video.lookfilm.LookFilmFragment;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by 刘士壬 on 16/9/13.
  */
 
-public class VideoFragment extends BaseFragment {
+public class VideoFragment extends BaseFragment implements RadioGroup.OnCheckedChangeListener {
+
 
     private EditText areaEt;// 地区
-    private String area;// 地区URL
-    private String areaUrl;
-    private RecyclerView videoRv;
 
     @Override
     protected int setLayout() {
@@ -39,48 +30,47 @@ public class VideoFragment extends BaseFragment {
     protected void initView() {
         //地区
         areaEt = bindView(R.id.video_area_et);
-        // recyclerView
-        videoRv = bindView(R.id.video_rv);
+        areaEt.setText("大连");
+        RadioGroup radioGroup = bindView(R.id.video_rg);
+        radioGroup.setOnCheckedChangeListener(this);
+        radioGroup.check(R.id.video_rb_recently);
 
     }
+
+
 
 
     @Override
     protected void initData() {
-        areaEt.setText("大连");
-        area = areaEt.getText().toString();
-        try {
-            areaUrl = URLEncoder.encode(area,"utf-8");//转码
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        String recentlyUrl = ToolsGather.RECENTLY_VIDEO_URL + areaUrl + ToolsGather.APP_KEY;
-        Log.d("VideoFragment", recentlyUrl);
 
-        tool().getData(recentlyUrl, RecentlyFilmBean.class, new NetTool.NetInterface<RecentlyFilmBean>() {
-            @Override
-            public void onSuccess(RecentlyFilmBean recentlyFilmBean) {
-                GridLayoutManager manager = new GridLayoutManager(MyApp.getContext(), 1);
-                videoRv.setLayoutManager(manager);
-                videoRv.setAdapter(new RecycleViewAdapter<RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean>
-                        (recentlyFilmBean.getResult().getData().get(0).getData(),
-                        MyApp.getContext(), R.layout.item_video_recycler) {
 
-                    @Override
-                    public void setData(RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
-                        viewHolder.setText(R.id.tv_video_film_title, dataiteBean.getTvTitle());
-                        viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
-                        viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
-                        viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
-                    }
-                });
-
-            }
-        });
     }
 
 
 
+
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        switch (i) {
+            case R.id.video_rb_recently:
+
+                fragmentTransaction.replace(R.id.video_frame_layout, new AmongFragmentemt());
+                //      EventBus 发送
+
+                DataEvent dataEvent = new DataEvent();
+                dataEvent.setArea(areaEt.getText().toString());
+                EventBus.getDefault().post(dataEvent);
+                break;
+            case R.id.video_rb_at_once:
+                fragmentTransaction.replace(R.id.video_frame_layout, new LookFilmFragment());
+                break;
+        }
+        fragmentTransaction.commit();
+    }
 }
 
 
