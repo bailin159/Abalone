@@ -34,7 +34,7 @@ public class NewsALLFragment extends BaseFragment {
                         viewHolder.setText(R.id.tv_writer_news, t1348649079062Bean.getSource());
                         viewHolder.setText(R.id.tv_title_news,t1348649079062Bean.getTitle());
                         viewHolder.setText(R.id.tv_tag_news,t1348649079062Bean.getLmodify());
-                        viewHolder.setImage(t1348649079062Bean.getImgsrc(),R.id.img_ls_news);
+                        viewHolder.setImage(R.id.img_ls_news,t1348649079062Bean.getImgsrc());
                     }
                 });
             }
