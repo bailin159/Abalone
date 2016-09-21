@@ -19,6 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".tools.citylist.CitySelecterActivity"/>
+        <activity android:name=".video.filminformation.SecondVideoActivity"/>
     </application>
 
 </manifest>

@@ -6,14 +6,13 @@
     android:orientation="vertical">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:background="#6495ED">
+        android:background="#6495ED"
+        android:orientation="horizontal">
 
-        <EditText
+        <Button
             android:id="@+id/video_area_et"
             android:layout_width="50dp"
             android:layout_height="match_parent"
@@ -27,10 +26,11 @@
             android:id="@+id/video_rg"
             android:layout_width="220dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="40dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
             android:background="@drawable/shape_find_tv"
             android:orientation="horizontal">
+
 
             <RadioButton
                 android:id="@+id/video_rb_recently"
@@ -39,7 +39,7 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:gravity="center"
-                android:text="最近影视" />
+                android:text="影视信息" />
 
             <RadioButton
                 android:id="@+id/video_rb_at_once"
@@ -48,14 +48,13 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:gravity="center"
+                android:text="看电影" />
 
-                android:text="即将上映" />
 
         </RadioGroup>
 
 
     </LinearLayout>
-
 
 
     <FrameLayout

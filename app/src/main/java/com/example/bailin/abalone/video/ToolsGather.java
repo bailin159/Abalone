@@ -8,8 +8,9 @@ package com.example.bailin.abalone.video;
  */
 public final class ToolsGather {
     public static final String APP_KEY = "&key=d8926a7ce48a5a6888baee1843e0f2ba";
+    public static final String SEARCH_APP_KEY = "key=d8926a7ce48a5a6888baee1843e0f2ba";
     //搜索电影 URL
-    public static final String SEARCH_VIDEO_URL = "http://op.juhe.cn/onebox/movie/video";
+    public static final String SEARCH_VIDEO_URL = "http://op.juhe.cn/onebox/movie/video?";
     //最近影讯URL
     public static final String RECENTLY_VIDEO_URL = "http://op.juhe.cn/onebox/movie/pmovie?city=";
     //电影名

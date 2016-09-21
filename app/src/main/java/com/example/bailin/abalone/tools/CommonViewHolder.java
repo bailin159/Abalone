@@ -82,4 +82,9 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
         Glide.with(MyApp.getContext()).load(imgUrl).into(imageView);
     }
 
+    public View setClick(int id) {
+        View view = getView(id);
+        return view;
+    }
+
 }
