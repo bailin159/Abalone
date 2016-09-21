@@ -1,11 +1,13 @@
 package com.example.bailin.abalone.news;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -22,6 +24,11 @@ public class NewsGirlAdapter extends BaseAdapter {
     private Context context;
 
     private NewsGirlBean data;
+    private NewsGirlListener newsGirlListener;
+
+    public void setNewsGirlListener(NewsGirlListener newsGirlListener) {
+        this.newsGirlListener = newsGirlListener;
+    }
 
     public void setNewsGirlBean(NewsGirlBean newsGirlBean) {
         this.data = newsGirlBean;
@@ -49,7 +56,7 @@ public class NewsGirlAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         MyViewHolder holder= null;
         if (holder == null) {
             view = LayoutInflater.from(context).inflate(R.layout.news_list_view_item,viewGroup,false);
@@ -63,18 +70,30 @@ public class NewsGirlAdapter extends BaseAdapter {
 //        holder.tvName.setText(data.getT1348648517839().get(i).getSource());
 
         Glide.with(MyApp.getContext()).load(data.getT1348648517839().get(i).getImgsrc()).into(holder.imageView);
+        //接口回调的方法
+        holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (data.getT1348648517839().get(i).getUrl_3w()!= null) {
+                    newsGirlListener.onClick(data.getT1348648517839().get(i).getUrl_3w());
+                }else{
+                    newsGirlListener.onClick(data.getT1348648517839().get(i).getImgsrc());
+                }
+            }
+        });
+
         return view;
     }
     private class MyViewHolder{
         private ImageView imageView;
         private TextView tvTitle,tvName,tvTime;
-
+        private RelativeLayout relativeLayout;
         public MyViewHolder(View view) {
             imageView = (ImageView) view.findViewById(R.id.img_ls_news);
             tvName = (TextView) view.findViewById(R.id.tv_writer_news);
             tvTime = (TextView) view.findViewById(R.id.tv_tag_news);
             tvTitle = (TextView) view.findViewById(R.id.tv_title_news);
-
+            relativeLayout = (RelativeLayout) view.findViewById(R.id.rl_news_id);
         }
     }
 }

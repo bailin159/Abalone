@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    android:id="@+id/rl_news_id"
     android:layout_width="match_parent"
     android:layout_height="100dp">
 
@@ -9,11 +9,9 @@
         android:layout_width="80dp"
         android:layout_height="70dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_marginTop="10dp" />
 
     <TextView
-        android:text="标题很多字的哪个"
         android:id="@+id/tv_title_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,11 +21,11 @@
         android:layout_toRightOf="@id/img_ls_news"
         android:ellipsize="end"
         android:maxLines="2"
+        android:text="标题很多字的哪个"
         android:textColor="#000000"
         android:textSize="19dp" />
 
     <TextView
-        android:text="爆娱狗崽子"
         android:id="@+id/tv_writer_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,10 +33,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="7dp"
         android:layout_toRightOf="@id/img_ls_news"
+        android:text="爆娱狗崽子"
         android:textColor="#123456" />
 
     <TextView
-        android:text="跟帖多少"
         android:id="@+id/tv_tag_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,6 +44,7 @@
         android:layout_below="@id/tv_title_news"
         android:layout_marginRight="7dp"
         android:layout_marginTop="7dp"
+        android:text="跟帖多少"
         android:textColor="#99A0AB" />
 
 </RelativeLayout>

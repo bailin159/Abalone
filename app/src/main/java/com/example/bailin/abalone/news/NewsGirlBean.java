@@ -8,36 +8,36 @@ import java.util.List;
  */
 public class NewsGirlBean {
 
+
     /**
-     * postid : PHOTIK4U000354GS
+     * postid : PHOTIKKK000300AJ
      * hasCover : false
      * hasHead : 1
-     * replyCount : 21700
+     * replyCount : 1832
      * hasImg : 1
      * digest :
      * hasIcon : true
-     * docid : 9IG74V5H00963VRO_C0S2IIE4humengyaoupdateDoc
-     * title : 曹云金谈恩怨：到此为止 不想炒作
+     * docid : 9IG74V5H00963VRO_C1C7VD9ObjchenkaiupdateDoc
+     * title : 小清新！周迅出席活动秀纤细美腿
      * order : 1
      * priority : 250
-     * lmodify : 2016-09-13 17:49:30
-     * boardid : photoview_bbs
+     * lmodify : 2016-09-20 07:47:09
+     * boardid : ent2_bbs
      * ads : [{"title":"敢穿我只服金大姐！金卡戴珊透视装出街","tag":"photoset","imgsrc":"http://cms-bucket.nosdn.127.net/35d13c7f1cdb485eb7b25a29d5e71bb820160910102629.jpeg","subtitle":"","url":"00AJ0003|610122"}]
-     * photosetID : 54GS0003|610462
+     * photosetID : 00AJ0003|610964
      * template : normal1
-     * votecount : 20691
-     * skipID : 54GS0003|610462
+     * votecount : 1749
+     * skipID : 00AJ0003|610964
      * alias : Entertainment
      * skipType : photoset
      * cid : C1348648351901
-     * editor : []
      * hasAD : 1
+     * imgextra : [{"imgsrc":"http://cms-bucket.nosdn.127.net/b46c30a5505e4f99b3a33a8029148af520160920001314.jpeg"},{"imgsrc":"http://cms-bucket.nosdn.127.net/07517521ddfb46aeac5c1a18d9c1c9c920160920001329.jpeg"}]
      * source : 网易原创
-     * imgType : 1
      * ename : yule
+     * imgsrc : http://cms-bucket.nosdn.127.net/eaf96e01c6c546b3bab5091a1e81683d20160920074635.jpeg
      * tname : 娱乐
-     * imgsrc : http://cms-bucket.nosdn.127.net/7892c255708246c393b7d1a838e67a0020160913174849.jpeg
-     * ptime : 2016-09-13 17:31:30
+     * ptime : 2016-09-20 00:13:44
      */
 
     private List<T1348648517839Bean> T1348648517839;
@@ -73,11 +73,11 @@ public class NewsGirlBean {
         private String cid;
         private int hasAD;
         private String source;
-        private int imgType;
         private String ename;
-        private String tname;
         private String imgsrc;
+        private String tname;
         private String ptime;
+        private String url_3w;
         /**
          * title : 敢穿我只服金大姐！金卡戴珊透视装出街
          * tag : photoset
@@ -87,7 +87,11 @@ public class NewsGirlBean {
          */
 
         private List<AdsBean> ads;
-        private List<?> editor;
+        /**
+         * imgsrc : http://cms-bucket.nosdn.127.net/b46c30a5505e4f99b3a33a8029148af520160920001314.jpeg
+         */
+
+        private List<ImgextraBean> imgextra;
 
         public String getPostid() {
             return postid;
@@ -95,6 +99,14 @@ public class NewsGirlBean {
 
         public void setPostid(String postid) {
             this.postid = postid;
+        }
+
+        public String getUrl_3w() {
+            return url_3w;
+        }
+
+        public void setUrl_3w(String url_3w) {
+            this.url_3w = url_3w;
         }
 
         public boolean isHasCover() {
@@ -265,14 +277,6 @@ public class NewsGirlBean {
             this.source = source;
         }
 
-        public int getImgType() {
-            return imgType;
-        }
-
-        public void setImgType(int imgType) {
-            this.imgType = imgType;
-        }
-
         public String getEname() {
             return ename;
         }
@@ -281,20 +285,20 @@ public class NewsGirlBean {
             this.ename = ename;
         }
 
-        public String getTname() {
-            return tname;
-        }
-
-        public void setTname(String tname) {
-            this.tname = tname;
-        }
-
         public String getImgsrc() {
             return imgsrc;
         }
 
         public void setImgsrc(String imgsrc) {
             this.imgsrc = imgsrc;
+        }
+
+        public String getTname() {
+            return tname;
+        }
+
+        public void setTname(String tname) {
+            this.tname = tname;
         }
 
         public String getPtime() {
@@ -313,12 +317,12 @@ public class NewsGirlBean {
             this.ads = ads;
         }
 
-        public List<?> getEditor() {
-            return editor;
+        public List<ImgextraBean> getImgextra() {
+            return imgextra;
         }
 
-        public void setEditor(List<?> editor) {
-            this.editor = editor;
+        public void setImgextra(List<ImgextraBean> imgextra) {
+            this.imgextra = imgextra;
         }
 
         public static class AdsBean {
@@ -366,6 +370,18 @@ public class NewsGirlBean {
 
             public void setUrl(String url) {
                 this.url = url;
+            }
+        }
+
+        public static class ImgextraBean {
+            private String imgsrc;
+
+            public String getImgsrc() {
+                return imgsrc;
+            }
+
+            public void setImgsrc(String imgsrc) {
+                this.imgsrc = imgsrc;
             }
         }
     }

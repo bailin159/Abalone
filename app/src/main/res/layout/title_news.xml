@@ -20,7 +20,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
-        android:text="爆娱八卦"
+        android:text="内容提供者"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
 </LinearLayout>

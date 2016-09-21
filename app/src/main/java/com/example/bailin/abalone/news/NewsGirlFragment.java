@@ -1,14 +1,16 @@
 package com.example.bailin.abalone.news;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 
 import android.support.v4.view.ViewPager;
 
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
-
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseFragment;
 import com.example.bailin.abalone.tools.MyApp;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
  */
 public class NewsGirlFragment extends BaseFragment {
     private String newsGirlUrl="http://c.3g.163.com/nc/article/list/T1348648517839/0-20.html";
+    private String newsItemUrl="http://c.3g.163.com/";
     private LisatViewForScrollView mListView;
     private ViewPager viewPager;
     private LinearLayout linearLayout;
@@ -33,6 +36,8 @@ public class NewsGirlFragment extends BaseFragment {
     private boolean mm= true;
 
     private ImageView[] tips;
+    private NewsGirlAdapter adapter;
+
     @Override
     protected int setLayout() {
         return R.layout.fragment_news_girl;
@@ -50,23 +55,34 @@ public class NewsGirlFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-      tool().getData(newsGirlUrl, NewsGirlBean.class, new NetTool.NetInterface<NewsGirlBean>() {
-      @Override
-      public void onSuccess(NewsGirlBean newsGirlBean) {
-          NewsGirlAdapter adapter = new NewsGirlAdapter(MyApp.getContext());
+        //解析listView的item数据
+        tool().getData(newsGirlUrl, NewsGirlBean.class, new NetTool.NetInterface<NewsGirlBean>() {
+         @Override
+         public void onSuccess(NewsGirlBean newsGirlBean) {
+             adapter = new NewsGirlAdapter(MyApp.getContext());
           adapter.setNewsGirlBean(newsGirlBean);
+             adapter.setNewsGirlListener(new NewsGirlListener() {
+
+                 //接口回调   点击进去是webView
+                 @Override
+                 public void onClick(String urlWeb) {
+                     Intent intent = new Intent(getContext(), NewsChildActivity.class);
+                     intent.putExtra("url", urlWeb);
+                     getContext().startActivity(intent);
+                 }
+             });
           mListView.setAdapter(adapter);
 
 
       }
   });
+
+                //轮播图
         myAdapter=new NewsBannerAdapter(MyApp.getContext());
         images = new ArrayList<>();
-
-
-        for (int i = 0; i < 5; i++) {
-            images.add(R.mipmap.ic_launcher);
-        }
+            images.add(R.mipmap.yinsuwan);
+            images.add(R.mipmap.baoyu_wangzhi);
+            images.add(R.mipmap.daiyouxiang);
 
         myAdapter.setImages(images);
         viewPager.setAdapter(myAdapter);
@@ -126,9 +142,12 @@ public class NewsGirlFragment extends BaseFragment {
 //          View views= LayoutInflater.from(MyApp.getContext()).inflate(R.layout.news_banner_head_view,null);
 //          mListView.addHeaderView(views);
         }
-
           myAdapter.setTips(tips);
 
 
+
     }
+
+
+
 }

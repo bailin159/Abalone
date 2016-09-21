@@ -35,6 +35,7 @@ public class NewsFragment extends BaseFragment {
         datas=new ArrayList<>();
         datas.add(new NewsGirlFragment());//娱乐
         datas.add(new NewsALLFragment());//全部
+        datas.add(new NewNBFragment());//笑话
 
          NewTabAdapter newTabAdapter =new NewTabAdapter(getChildFragmentManager(),datas);
         newsViewPager.setAdapter(newTabAdapter);

@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ListView;
 
+import com.example.bailin.abalone.tools.NetTool;
+
 /**
  * Created by CPC_272 on 16/9/18.
  */
@@ -34,5 +36,7 @@ public class LisatViewForScrollView extends ListView {
         }
         return super.dispatchTouchEvent(ev);
     }
+
+
 
 }
