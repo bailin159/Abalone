@@ -21,6 +21,6 @@ public class ServiceFragment extends BaseFragment {
 
     @Override
     protected void initData() {
-
+        
     }
 }
