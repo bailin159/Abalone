@@ -36,12 +36,10 @@ public class CommonViewHolder {
         return viewHolder;
     }
 
-
     public CommonViewHolder(View convertView) {
         views = new SparseArray<>();
         this.convertView = convertView;
         this.convertView.setTag(this);
-
     }
 
     /**
@@ -66,7 +64,6 @@ public class CommonViewHolder {
         TextView textView = getView(id);
         textView.setText(text);
     }
-
 
     // 设置图片
     public void setImage(String imgUrl, int id) {
