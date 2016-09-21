@@ -6,16 +6,16 @@
   <include layout="@layout/title_news"/>
 
 <android.support.design.widget.TabLayout
+    android:background="#FFFFFF"
     android:id="@+id/news_tl_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
     />
  <android.support.v4.view.ViewPager
+     android:background="#FFFFFF"
      android:id="@+id/news_vp_title"
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1" />
-
-
 </LinearLayout>

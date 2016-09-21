@@ -3,7 +3,6 @@ package com.example.bailin.abalone.news;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
 import java.util.ArrayList;
 
 /**
@@ -18,8 +17,9 @@ public class NewTabAdapter extends FragmentPagerAdapter {
         super(fm);
         this.data = data;
         title=new ArrayList<>();
-        title.add("娱乐");
+        title.add("八卦");
         title.add("头条");
+        title.add("爆笑");
     }
 
     @Override

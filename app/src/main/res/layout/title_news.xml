@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:background="#123456"
     android:layout_height="wrap_content">
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/news_title_image"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:padding="10dp"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="5dp"
-        android:src="@mipmap/blue" />
+        android:src="@mipmap/baoyu_logo" />
 
     <TextView
         android:id="@+id/title_tv_news"
@@ -20,9 +20,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
-        android:text="爆娱大事件"
+        android:text="内容提供者"
         android:textColor="@color/colorAccent"
         android:textSize="20sp" />
-
-
 </LinearLayout>
