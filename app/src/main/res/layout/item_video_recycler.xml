@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_video_id"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tv_video_film_icon"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:src="@mipmap/baoyu_logo_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_video_film_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="电影名"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/video_film_fraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:text="4.4"
+                    android:textColor="#008B00"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_video_film_data"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="9月14日上映"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_video_film_subHead"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="今日28家影院上映"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_video_film_story"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="简介"
+                android:textSize="13sp"
+                android:textColor="#FF6347"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#CFCFCF" />
+</LinearLayout>

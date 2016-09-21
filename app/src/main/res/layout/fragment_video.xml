@@ -2,40 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
 
     <LinearLayout
-        android:id="@+id/video_title"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#4F4F4F">
+        android:layout_height="50dp"
+        android:background="#6495ED"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="170dp"
-            android:gravity="center_vertical"
-            android:text="爆娱"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
-
-        <EditText
+        <Button
             android:id="@+id/video_area_et"
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="100dp"
             android:background="@null"
             android:gravity="center"
             android:hint="地址"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/video_rg"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/shape_find_tv"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/video_rb_recently"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="影视信息" />
+
+            <RadioButton
+                android:id="@+id/video_rb_at_once"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="看电影" />
+
+
+        </RadioGroup>
+
+
     </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/video_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
 
 
 </LinearLayout>

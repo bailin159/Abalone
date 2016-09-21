@@ -1,5 +1,6 @@
 package com.example.bailin.abalone.tools;
 
+import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,7 @@ import com.bumptech.glide.Glide;
  * Created by 白霖 on 16/9/13.
  * 一个通用的ViewHolder, 试用于所有的Adapter
  */
-public class CommonViewHolder {
+public class CommonViewHolder extends RecyclerView.ViewHolder {
     // SparseArray 可以看成是一个Key值是int类型的HashMap
     // 它是Android 特有的, 它的效率要比HashMap高
     private SparseArray<View> views;
@@ -36,7 +37,18 @@ public class CommonViewHolder {
         return viewHolder;
     }
 
+<<<<<<< HEAD
+=======
+    public static CommonViewHolder getHolder(LayoutInflater inflater, int id, ViewGroup parent) {
+        View view = inflater.inflate(id, parent, false);
+        CommonViewHolder viewHolder = new CommonViewHolder(view);
+        return viewHolder;
+    }
+
+
+>>>>>>> feature/LSR-视频2
     public CommonViewHolder(View convertView) {
+        super(convertView);
         views = new SparseArray<>();
         this.convertView = convertView;
         this.convertView.setTag(this);
@@ -65,9 +77,20 @@ public class CommonViewHolder {
         textView.setText(text);
     }
 
+
     // 设置图片
-    public void setImage(String imgUrl, int id) {
+    public void setImage(int id, String imgUrl) {
         ImageView imageView = getView(id);
         Glide.with(MyApp.getContext()).load(imgUrl).into(imageView);
     }
+
 }
+
+
+    public View setClick(int id) {
+        View view = getView(id);
+        return view;
+    }
+
+}
+>>>>>>> feature/LSR-视频2
