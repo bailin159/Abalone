@@ -3,6 +3,7 @@ package com.example.bailin.abalone.video.filminformation;
 import android.content.Intent;
 import android.view.KeyEvent;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseActivity;
@@ -26,6 +27,7 @@ public class SecondVideoActivity extends BaseActivity {
         webUrl = intent.getStringExtra("webUrl");
         webView = new WebView(this);
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(webUrl);
         setContentView(webView);
     }

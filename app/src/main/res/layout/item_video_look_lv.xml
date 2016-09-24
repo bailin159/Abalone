@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="请选择直播来源"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_aiqiyi_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_cntv_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_huashu_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_mangguo_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_leshi_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_qq_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_levp_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_tudou_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_souhu_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/item_look_lv_youku_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+
+    <TextView
+        android:id="@+id/item_look_lv_xunlei_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_stroke"
+        android:gravity="center"
+        android:text="数据"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

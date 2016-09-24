@@ -92,7 +92,6 @@ public class RecentlyVideoFragment extends BaseFragment {
                         viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
                         viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
                         viewHolder.setText(R.id.video_film_fraction, dataiteBean.getGrade());
-//                        viewHolder.itemView.setOnClickListener(new );
                         LinearLayout linearLayout = (LinearLayout) viewHolder.setClick(R.id.ll_video_id);
                         linearLayout.setOnClickListener(new View.OnClickListener() {
                             @Override
