@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity">
+        <activity android:name=".main.WelconeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +24,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
         <activity android:name=".news.NewsChildActivity" />
+        <activity android:name=".main.MainActivity"/>
 
     </application>
 

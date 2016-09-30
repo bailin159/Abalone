@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseFragment;
@@ -87,11 +88,11 @@ public class RecentlyVideoFragment extends BaseFragment {
 
                     @Override
                     public void setData(final RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
+
                         viewHolder.setText(R.id.tv_video_film_title, dataiteBean.getTvTitle());
                         viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
                         viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
                         viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
-                        viewHolder.setText(R.id.video_film_fraction, dataiteBean.getGrade());
                         LinearLayout linearLayout = (LinearLayout) viewHolder.setClick(R.id.ll_video_id);
                         linearLayout.setOnClickListener(new View.OnClickListener() {
                             @Override
