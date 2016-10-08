@@ -197,6 +197,32 @@ public class SearchFilmBean {
         public static class PlaylinksBean {
             private String qiyi;
             private String sohu;
+            private String cntv;
+            private String imgo;
+            private String leshi;
+            private String tudou;
+            private String youku;
+            private String qq;
+            private String huashu;
+            private String xunlei;
+            private String levp;
+
+            @Override
+            public String toString() {
+                return "PlaylinksBean{" +
+                        "qiyi='" + qiyi + '\'' +
+                        ", sohu='" + sohu + '\'' +
+                        ", cntv='" + cntv + '\'' +
+                        ", imgo='" + imgo + '\'' +
+                        ", leshi='" + leshi + '\'' +
+                        ", tudou='" + tudou + '\'' +
+                        ", youku='" + youku + '\'' +
+                        ", qq='" + qq + '\'' +
+                        ", huashu='" + huashu + '\'' +
+                        ", xunlei='" + xunlei + '\'' +
+                        ", levp='" + levp + '\'' +
+                        '}';
+            }
 
             public String getQiyi() {
                 return qiyi;
@@ -212,6 +238,78 @@ public class SearchFilmBean {
 
             public void setSohu(String sohu) {
                 this.sohu = sohu;
+            }
+
+            public String getCntv() {
+                return cntv;
+            }
+
+            public void setCntv(String cntv) {
+                this.cntv = cntv;
+            }
+
+            public String getImgo() {
+                return imgo;
+            }
+
+            public void setImgo(String imgo) {
+                this.imgo = imgo;
+            }
+
+            public String getLeshi() {
+                return leshi;
+            }
+
+            public void setLeshi(String leshi) {
+                this.leshi = leshi;
+            }
+
+            public String getTudou() {
+                return tudou;
+            }
+
+            public void setTudou(String tudou) {
+                this.tudou = tudou;
+            }
+
+            public String getYouku() {
+                return youku;
+            }
+
+            public void setYouku(String youku) {
+                this.youku = youku;
+            }
+
+            public String getQq() {
+                return qq;
+            }
+
+            public void setQq(String qq) {
+                this.qq = qq;
+            }
+
+            public String getHuashu() {
+                return huashu;
+            }
+
+            public void setHuashu(String huashu) {
+                this.huashu = huashu;
+            }
+
+            public String getXunlei() {
+                return xunlei;
+            }
+
+            public void setXunlei(String xunlei) {
+                this.xunlei = xunlei;
+            }
+
+            public String getLevp() {
+                return levp;
+            }
+
+            public void setLevp(String levp) {
+                this.levp = levp;
             }
         }
 

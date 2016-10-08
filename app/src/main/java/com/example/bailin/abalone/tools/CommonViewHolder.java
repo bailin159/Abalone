@@ -74,6 +74,10 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
         textView.setText(text);
     }
 
+
+
+
+
     // 设置图片
     public void setImage(int id, String imgUrl) {
         ImageView imageView = getView(id);
