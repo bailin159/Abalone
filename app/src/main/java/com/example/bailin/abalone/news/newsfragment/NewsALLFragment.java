@@ -38,7 +38,7 @@ public class NewsALLFragment extends BaseFragment {
                         viewHolder.setText(R.id.tv_tag_news,t1348649079062Bean.getLmodify());
                         viewHolder.setImage(R.id.img_ls_news,t1348649079062Bean.getImgsrc());
 //                        ObjectAnimator.ofFloat(viewHolder.getConvertView(), "translationY", 400, 0).setDuration(1000).start();
-                        ObjectAnimator.ofFloat(viewHolder.getConvertView(), "rotationX", 180, 0).setDuration(1000).start();
+//                        ObjectAnimator.ofFloat(viewHolder.getConvertView(), "rotationX", 180, 0).setDuration(1000).start();
                     }
                 });
             }

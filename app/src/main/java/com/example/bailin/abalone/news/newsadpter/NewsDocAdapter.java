@@ -38,9 +38,9 @@ public class NewsDocAdapter extends RecyclerView.Adapter<NewsDocAdapter.DocViewH
     @Override
     public void onBindViewHolder(DocViewHolder holder, int position) {
         if (index % count == position) {
-            holder.iv.setImageResource(R.mipmap.kefulan);
+            holder.iv.setImageResource(R.mipmap.heisedian);
         } else {
-            holder.iv.setImageResource(R.mipmap.kefu);
+            holder.iv.setImageResource(R.mipmap.baisedian);
         }
     }
 

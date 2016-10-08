@@ -20,7 +20,7 @@ public class NewTabAdapter extends FragmentPagerAdapter {
         title.add("八卦");
         title.add("头条");
         title.add("爆笑");
-        title.add("时间");
+
     }
 
     @Override
