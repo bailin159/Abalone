@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/current_user_border_color">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/baoyu_wangzhi" />
+
+        <ImageView
+            android:id="@+id/desitroy_logon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:src="@mipmap/common_nav_icon_back" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/logonChild_user"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/shape_blue_line"
+        android:hint="输入用户名"
+        android:maxLength="6"
+        android:textCursorDrawable="@drawable/shape_curso" />
+
+    <EditText
+        android:id="@+id/logonChild_authCode"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/shape_blue_line"
+        android:hint="输入验证码"
+        android:textCursorDrawable="@drawable/shape_curso" />
+
+    <EditText
+        android:id="@+id/logonChild_passWord"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/shape_blue_line"
+        android:hint="输入密码"
+        android:textCursorDrawable="@drawable/shape_curso" />
+
+    <Button
+        android:id="@+id/finish_logon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_dialog"
+        android:text="完成注册" />
+</LinearLayout>

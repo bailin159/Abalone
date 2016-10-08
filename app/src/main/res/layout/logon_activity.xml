@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/batterymeter_bolt_color"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="注册成为爆娱用户，即享一站式娱乐服务" />
+
+    <EditText
+        android:id="@+id/et_phoneNum"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/shape_blue_line"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textCursorDrawable="@drawable/shape_curso" />
+
+    <Button
+        android:id="@+id/getcaptcha_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_dialog"
+        android:text="获取验证码" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="注册代表你同意" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="爆娱乐网络使用协议和隐私协议" />
+</LinearLayout>
