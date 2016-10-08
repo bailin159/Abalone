@@ -28,7 +28,8 @@ public class WelconeActivity extends BaseActivity implements View.OnClickListene
         CustomVieoView customVieoView = bindView(R.id.welcome_custom_videoview);
         Button enterBtn = bindView(R.id.welcome_custom_enter_btn);
         enterBtn.setOnClickListener(this);
-        customVieoView.setVideoURI(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"));
+//        customVieoView.setVideoURI(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"));
+        customVieoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.ablone));
         //播放
         customVieoView.start();
         //循环播放
