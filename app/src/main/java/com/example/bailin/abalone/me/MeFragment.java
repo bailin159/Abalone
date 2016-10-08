@@ -41,7 +41,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
         bmobUser = BmobUser.getCurrentUser();
         if (bmobUser != null) {
             //这里面有数据就执行了这个方法
-            mineOpen.setText("爆娱乐新用户");
+            mineOpen.setText("爆娱新用户");
             //这个是JPG格式的照片有可能会报错
             mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
         }else{
@@ -56,7 +56,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
         bmobUser = BmobUser.getCurrentUser();
         if (bmobUser != null) {
             //这里面有数据就执行了这个方法
-            mineOpen.setText("爆娱乐新用户");
+            mineOpen.setText("爆娱新用户");
             //这个是JPG格式的照片有可能会报错
             mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
         }else{
@@ -75,7 +75,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.login_btn:
                 if (bmobUser != null) {
-                    mineOpen.setText("爆娱乐新用户");
+                    mineOpen.setText("爆娱新用户");
                     //这个是JPG格式的照片有可能会报错
                     mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
                 }else{
@@ -90,7 +90,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.mine_open:
                 if (bmobUser != null) {
-                    mineOpen.setText("爆娱乐新用户");
+                    mineOpen.setText("爆娱新用户");
                     //这个是JPG格式的照片有可能会报错
                     mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
                 }else{
@@ -100,7 +100,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.mine_heard://头像
                 if (bmobUser != null) {
-                    mineOpen.setText("爆娱乐新用户");
+                    mineOpen.setText("爆娱新用户");
                     //这个是JPG格式的照片有可能会报错
                     mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
                 }else {

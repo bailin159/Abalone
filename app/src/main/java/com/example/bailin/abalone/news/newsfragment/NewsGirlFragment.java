@@ -117,7 +117,7 @@ public class NewsGirlFragment extends BaseFragment {
                     @Override
                     public void onSuccess(NewsGirlBean newsGirlBean) {
                         mListView.setAdapter(null);
-                        adapter = new NewsGirlAdapter(getContext());
+                        adapter = new NewsGirlAdapter(MyApp.getContext());
                         adapter.setNewsGirlBean(newsGirlBean);
                         adapter.setNewsGirlListener(new NewsGirlListener() {
                             @Override
