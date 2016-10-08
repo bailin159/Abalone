@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * 登入和注册页面tablayout加Viewpager的适配器
- * Created by CPC_272 on 16/8/27.
+ * Created by CPC_272 on 16/10/8.
  */
 public class LoginAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> fragments;

@@ -36,6 +36,22 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        bmobUser = BmobUser.getCurrentUser();
+        if (bmobUser != null) {
+            //这里面有数据就执行了这个方法
+            mineOpen.setText("爆娱乐新用户");
+            //这个是JPG格式的照片有可能会报错
+            mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
+        }else{
+            mineOpen.setText("未登录");
+            //这个是JPG格式的照片有可能会报错
+            mineHeard.setImageResource(R.mipmap.ic_launcher);
+        }
+    }
+
+    @Override
     protected void initData() {
         bmobUser = BmobUser.getCurrentUser();
         if (bmobUser != null) {
@@ -86,7 +102,7 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
                 if (bmobUser != null) {
                     mineOpen.setText("爆娱乐新用户");
                     //这个是JPG格式的照片有可能会报错
-                    mineHeard.setImageResource(R.mipmap.ic_launcher);
+                    mineHeard.setImageResource(R.mipmap.baoyu_wangzhi);
                 }else {
                     Intent intent1 = new Intent(getActivity(), LoginActivity.class);
                     getActivity().startActivity(intent1);

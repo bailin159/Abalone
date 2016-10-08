@@ -2,6 +2,7 @@ package com.example.bailin.abalone.me;
 
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +17,7 @@ import cn.bmob.v3.listener.SaveListener;
 
 /**
  * 登入
- * Created by CPC_272 on 16/8/27.
+ * Created by CPC_272 on 16/10/8.
  */
 public class LoginFragment extends BaseFragment {
     private EditText edit_account,edit_password;
@@ -25,6 +26,8 @@ public class LoginFragment extends BaseFragment {
     protected int setLayout() {
         return R.layout.fragment_login;
     }
+
+
 
     @Override
     protected void initView() {
@@ -47,7 +50,6 @@ public class LoginFragment extends BaseFragment {
                 bmobUser.login(new SaveListener<BmobUser>() {
                     @Override
                     public void done(BmobUser bmobUser, BmobException e) {
-
                         if (e == null) {
                             Intent intent = new Intent(getActivity(), MainActivity.class);
                             startActivity(intent);

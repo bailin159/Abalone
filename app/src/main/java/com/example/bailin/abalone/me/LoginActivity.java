@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * 登入和注册页面tablayout加Viewpager的主页
- * Created by CPC_272 on 16/8/27.
+ * Created by CPC_272 on 16/10/8.
  */
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private TabLayout tab_login;
