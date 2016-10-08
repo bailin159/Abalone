@@ -1,1 +1,5 @@
+
 include ':app', ':lib', ':vitamio'
+
+include ':app', ':lib', ':library'
+

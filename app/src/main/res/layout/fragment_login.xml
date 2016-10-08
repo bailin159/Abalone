@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/loginrv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/llay_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_account"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@null"
+            android:drawableBottom="@drawable/shape_blue_line"
+            android:hint="手机号码/邮箱"
+            android:padding="10dp"
+            android:textCursorDrawable="@drawable/shape_curso" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:drawableBottom="@drawable/shape_blue_line"
+            android:hint="密码"
+            android:padding="10dp"
+            android:textCursorDrawable="@drawable/shape_curso" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/llay_dialog"
+        android:layout_below="@id/llay_dialog"
+        android:text="忘记密码?" />
+    <Button
+        android:id="@+id/Btn_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/llay_dialog"
+        android:layout_below="@id/tv_forget"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_dialog"
+        android:text="登录" />
+</RelativeLayout>
