@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseFragment;
@@ -91,29 +92,34 @@ public class AtOnceVideoFragment extends BaseFragment {
             public void onSuccess(RecentlyFilmBean recentlyFilmBean) {
                 GridLayoutManager manager = new GridLayoutManager(MyApp.getContext(), 1);
                 atOnceRv.setLayoutManager(manager);
-                atOnceRv.setAdapter(new RecycleViewAdapter<RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean>
-                        (recentlyFilmBean.getResult().getData().get(1).getData(),
-                                MyApp.getContext(), R.layout.item_video_recycler) {
+                try{
+                    atOnceRv.setAdapter(new RecycleViewAdapter<RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean>
+                            (recentlyFilmBean.getResult().getData().get(1).getData(),
+                                    MyApp.getContext(), R.layout.item_video_recycler) {
 
-                    @Override
-                    public void setData(final RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
-                        TextView fractionTv = (TextView) viewHolder.setClick(R.id.video_film_fraction);
-                        fractionTv.setVisibility(View.GONE);
-                        viewHolder.setText(R.id.tv_video_film_title, dataiteBean.getTvTitle());
-                        viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
-                        viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
-                        viewHolder.setText(R.id.tv_video_film_data, dataiteBean.getPlayDate().getData());
-                        viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
-                        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent = new Intent(getActivity(), SecondVideoActivity.class);
-                                intent.putExtra("webUrl", dataiteBean.getM_iconlinkUrl());
-                                startActivity(intent);
-                            }
-                        });
-                    }
-                });
+                        @Override
+                        public void setData(final RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
+                            TextView fractionTv = (TextView) viewHolder.setClick(R.id.video_film_fraction);
+                            fractionTv.setVisibility(View.GONE);
+                            viewHolder.setText(R.id.tv_video_film_title, dataiteBean.getTvTitle());
+                            viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
+                            viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
+                            viewHolder.setText(R.id.tv_video_film_data, dataiteBean.getPlayDate().getData());
+                            viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
+                            viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Intent intent = new Intent(getActivity(), SecondVideoActivity.class);
+                                    intent.putExtra("webUrl", dataiteBean.getM_iconlinkUrl());
+                                    startActivity(intent);
+                                }
+                            });
+                        }
+                    });
+                }catch (Exception e){
+                    Toast.makeText(mContext, "暂不支持该地区哦", Toast.LENGTH_SHORT).show();
+                }
+
 
 
             }
