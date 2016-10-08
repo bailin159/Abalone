@@ -1,4 +1,4 @@
-package com.example.bailin.abalone.news;
+package com.example.bailin.abalone.news.newsadpter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -20,6 +20,7 @@ public class NewTabAdapter extends FragmentPagerAdapter {
         title.add("八卦");
         title.add("头条");
         title.add("爆笑");
+
     }
 
     @Override

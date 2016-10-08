@@ -7,9 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.bailin.abalone.tools.NetTool;
-
 /**
  * Created by 白霖 on 16/9/13.
  */

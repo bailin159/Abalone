@@ -1,14 +1,11 @@
-package com.example.bailin.abalone.news;
-
+package com.example.bailin.abalone.news.newsfragment;
 import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.widget.ImageView;
-
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseFragment;
-
+import com.example.bailin.abalone.news.newsadpter.NewTabAdapter;
 import java.util.ArrayList;
 
 /**
@@ -41,8 +38,9 @@ public class NewsFragment extends BaseFragment {
         newsViewPager.setAdapter(newTabAdapter);
         newsTabLayout.setupWithViewPager(newsViewPager);
         //设置选定的标签显示颜色
-        newsTabLayout.setSelectedTabIndicatorColor(Color.GRAY);
-        //改变选中字体的颜色
-       newsTabLayout.setTabTextColors(Color.rgb(0x98, 0x9d, 0xa8), Color.rgb(0x6c, 0x8f, 0xff));
+        newsTabLayout.setSelectedTabIndicatorColor(Color.WHITE);
+        newsTabLayout.setTabTextColors(Color.BLACK,Color.WHITE);
+//        //改变选中字体的颜色,
+//       newsTabLayout.setTabTextColors(Color.rgb(0x98, 0x9d, 0xa8), Color.rgb(0x6c, 0x8f, 0xff));
     }
 }

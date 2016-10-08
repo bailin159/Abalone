@@ -9,7 +9,7 @@ import android.widget.RadioGroup;
 import com.example.bailin.abalone.R;
 import com.example.bailin.abalone.baseclass.BaseActivity;
 import com.example.bailin.abalone.me.MeFragment;
-import com.example.bailin.abalone.news.NewsFragment;
+import com.example.bailin.abalone.news.newsfragment.NewsFragment;
 import com.example.bailin.abalone.service.ServiceFragment;
 import com.example.bailin.abalone.video.VideoFragment;
 
