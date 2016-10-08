@@ -1,56 +1,56 @@
-package com.example.bailin.abalone.news;
+package com.example.bailin.abalone.news.newsbean;
 
 import java.util.List;
 
 /**
- * 新闻页面的头条数据类
+ * 娱乐数据类
  * Created by CPC_272 on 16/9/13.
  */
-public class NewsAllBean {
+public class NewsGirlBean {
 
 
     /**
-     * postid : PHOT2324D000100A
+     * postid : PHOTIKKK000300AJ
      * hasCover : false
      * hasHead : 1
-     * replyCount : 14854
+     * replyCount : 1832
      * hasImg : 1
      * digest :
-     * hasIcon : false
-     * docid : 9IG74V5H00963VRO_C0S4VDABbjzhanglimengupdateDoc
-     * title : 合肥居民遭遇“黑枪” 阳台玻璃被击穿
+     * hasIcon : true
+     * docid : 9IG74V5H00963VRO_C1C7VD9ObjchenkaiupdateDoc
+     * title : 小清新！周迅出席活动秀纤细美腿
      * order : 1
-     * priority : 345
-     * lmodify : 2016-09-13 18:16:30
-     * boardid : photoview_bbs
-     * ads : [{"docid":"C0ROH2CH05169QC9","title":"一言不合就收费?教你必杀技留着\"防身\"","tag":"doc","imgsrc":"http://cms-bucket.nosdn.127.net/3fae6880f7274d048c2fa2531d3ce95520160913191440.jpeg","subtitle":"","url":"C0ROH2CH05169QC9"},{"docid":"C0S5B6E805169QC9","title":"别人家的网红食堂，轻松甩你几条街","tag":"doc","imgsrc":"http://cms-bucket.nosdn.127.net/c2c5263ab93646bb84ee5ea6008183e720160913183636.jpeg","subtitle":"","url":"C0S5B6E805169QC9"},{"title":"住建部否认海绵城市试点失败 称在推进","tag":"photoset","imgsrc":"http://cms-bucket.nosdn.127.net/37631833862e4fa88ae82dca867aa53220160913160915.jpeg","subtitle":"","url":"00AP0001|2197605"},{"title":"青岛一村过中秋现场发500万现金","tag":"photoset","imgsrc":"http://cms-bucket.nosdn.127.net/ea97d6ecf03f4c3680dc40dd606e427920160913120917.jpeg","subtitle":"","url":"00AP0001|2197560"},{"title":"快播涉黄被判罚1千万 王欣等4人获刑","tag":"photoset","imgsrc":"http://cms-bucket.nosdn.127.net/b9e303b979974822a6effc0a4790086320160913112644.jpeg","subtitle":"","url":"00AP0001|2197534"}]
-     * photosetID : 00AP0001|2197645
+     * priority : 250
+     * lmodify : 2016-09-20 07:47:09
+     * boardid : ent2_bbs
+     * ads : [{"title":"敢穿我只服金大姐！金卡戴珊透视装出街","tag":"photoset","imgsrc":"http://cms-bucket.nosdn.127.net/35d13c7f1cdb485eb7b25a29d5e71bb820160910102629.jpeg","subtitle":"","url":"00AJ0003|610122"}]
+     * photosetID : 00AJ0003|610964
      * template : normal1
-     * votecount : 14024
-     * skipID : 00AP0001|2197645
-     * alias : Top News
+     * votecount : 1749
+     * skipID : 00AJ0003|610964
+     * alias : Entertainment
      * skipType : photoset
-     * cid : C1348646712614
+     * cid : C1348648351901
      * hasAD : 1
-     * imgextra : [{"imgsrc":"http://cms-bucket.nosdn.127.net/ee7f8ef6471146308666fe40a5dce1ed20160913181418.jpeg"},{"imgsrc":"http://cms-bucket.nosdn.127.net/c63b993f0a5e4c4786897bf0a312f09120160913181419.jpeg"}]
+     * imgextra : [{"imgsrc":"http://cms-bucket.nosdn.127.net/b46c30a5505e4f99b3a33a8029148af520160920001314.jpeg"},{"imgsrc":"http://cms-bucket.nosdn.127.net/07517521ddfb46aeac5c1a18d9c1c9c920160920001329.jpeg"}]
      * source : 网易原创
-     * ename : androidnews
-     * imgsrc : http://cms-bucket.nosdn.127.net/7cfd7f2a3e7f47e0944891b67d1493e220160913181416.jpeg
-     * tname : 头条
-     * ptime : 2016-09-13 18:13:28
+     * ename : yule
+     * imgsrc : http://cms-bucket.nosdn.127.net/eaf96e01c6c546b3bab5091a1e81683d20160920074635.jpeg
+     * tname : 娱乐
+     * ptime : 2016-09-20 00:13:44
      */
 
-    private List<T1348647909107Bean> T1348647909107;
+    private List<T1348648517839Bean> T1348648517839;
 
-    public List<T1348647909107Bean> getT1348647909107() {
-        return T1348647909107;
+    public List<T1348648517839Bean> getT1348648517839() {
+        return T1348648517839;
     }
 
-    public void setT1348647909107(List<T1348647909107Bean> T1348647909107) {
-        this.T1348647909107 = T1348647909107;
+    public void setT1348648517839(List<T1348648517839Bean> T1348648517839) {
+        this.T1348648517839 = T1348648517839;
     }
 
-    public static class T1348647909107Bean {
+    public static class T1348648517839Bean {
         private String postid;
         private boolean hasCover;
         private int hasHead;
@@ -77,18 +77,18 @@ public class NewsAllBean {
         private String imgsrc;
         private String tname;
         private String ptime;
+        private String url_3w;
         /**
-         * docid : C0ROH2CH05169QC9
-         * title : 一言不合就收费?教你必杀技留着"防身"
-         * tag : doc
-         * imgsrc : http://cms-bucket.nosdn.127.net/3fae6880f7274d048c2fa2531d3ce95520160913191440.jpeg
+         * title : 敢穿我只服金大姐！金卡戴珊透视装出街
+         * tag : photoset
+         * imgsrc : http://cms-bucket.nosdn.127.net/35d13c7f1cdb485eb7b25a29d5e71bb820160910102629.jpeg
          * subtitle :
-         * url : C0ROH2CH05169QC9
+         * url : 00AJ0003|610122
          */
 
         private List<AdsBean> ads;
         /**
-         * imgsrc : http://cms-bucket.nosdn.127.net/ee7f8ef6471146308666fe40a5dce1ed20160913181418.jpeg
+         * imgsrc : http://cms-bucket.nosdn.127.net/b46c30a5505e4f99b3a33a8029148af520160920001314.jpeg
          */
 
         private List<ImgextraBean> imgextra;
@@ -99,6 +99,14 @@ public class NewsAllBean {
 
         public void setPostid(String postid) {
             this.postid = postid;
+        }
+
+        public String getUrl_3w() {
+            return url_3w;
+        }
+
+        public void setUrl_3w(String url_3w) {
+            this.url_3w = url_3w;
         }
 
         public boolean isHasCover() {
@@ -318,20 +326,11 @@ public class NewsAllBean {
         }
 
         public static class AdsBean {
-            private String docid;
             private String title;
             private String tag;
             private String imgsrc;
             private String subtitle;
             private String url;
-
-            public String getDocid() {
-                return docid;
-            }
-
-            public void setDocid(String docid) {
-                this.docid = docid;
-            }
 
             public String getTitle() {
                 return title;

@@ -1,7 +1,6 @@
-package com.example.bailin.abalone.news;
+package com.example.bailin.abalone.news.newsadpter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +11,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.bailin.abalone.R;
+import com.example.bailin.abalone.news.NewsGirlListener;
+import com.example.bailin.abalone.news.newsbean.NewsGirlBean;
 import com.example.bailin.abalone.tools.MyApp;
 
-import java.util.ArrayList;
 
 /**
  * 新闻界面娱乐适配器
@@ -28,10 +28,12 @@ public class NewsGirlAdapter extends BaseAdapter {
 
     public void setNewsGirlListener(NewsGirlListener newsGirlListener) {
         this.newsGirlListener = newsGirlListener;
+
     }
 
     public void setNewsGirlBean(NewsGirlBean newsGirlBean) {
         this.data = newsGirlBean;
+        notifyDataSetChanged();
     }
 
     public NewsGirlAdapter(Context context) {
