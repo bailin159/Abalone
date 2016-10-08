@@ -36,12 +36,10 @@
 
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
-        <activity
-            android:name=".video.filminformation.SecondVideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
 
-        <activity android:name=".news.NewsChildActivity" />
-        <activity android:name=".main.MainActivity"/>
+
+
+
 
 
     </application>
