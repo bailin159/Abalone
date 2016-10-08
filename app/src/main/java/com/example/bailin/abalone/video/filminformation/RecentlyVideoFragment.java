@@ -9,6 +9,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -90,9 +91,15 @@ public class RecentlyVideoFragment extends BaseFragment {
                     public void setData(final RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
 
                         viewHolder.setText(R.id.tv_video_film_title, dataiteBean.getTvTitle());
-                        viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
+                        if (dataiteBean.getIconaddress() != null){
+                            viewHolder.setImage(R.id.tv_video_film_icon, dataiteBean.getIconaddress());
+                        }else {
+                            ImageView im = (ImageView) viewHolder.setClick(R.id.tv_video_film_icon);
+                            im.setImageResource(R.mipmap.film_no_image);
+                        }
                         viewHolder.setText(R.id.tv_video_film_subHead, dataiteBean.getSubHead());
                         viewHolder.setText(R.id.tv_video_film_story, dataiteBean.getStory().getData().getStoryBrief());
+                        viewHolder.setText(R.id.video_film_fraction, dataiteBean.getGrade());
                         LinearLayout linearLayout = (LinearLayout) viewHolder.setClick(R.id.ll_video_id);
                         linearLayout.setOnClickListener(new View.OnClickListener() {
                             @Override
