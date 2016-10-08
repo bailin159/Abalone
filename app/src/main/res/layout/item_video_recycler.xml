@@ -36,7 +36,7 @@
                     android:layout_height="30dp"
                     android:text="电影名"
                     android:textColor="@color/colorBlack"
-                    android:textSize="22sp" />
+                    android:textSize="20.4sp" />
 
                 <TextView
                     android:id="@+id/video_film_fraction"
