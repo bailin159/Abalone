@@ -16,4 +16,10 @@ public final class ToolsGather {
     //电影名
     public static final String FILM_NAME = "&q=";
 
+
+    // 新闻视频精选
+    public static final String SELECTION_VIDEO = "http://home.m.sjzhushou.com/homepage/refreshpage?device=iPhone8%2C1&id=377452071036000&ios_ver=10.0.1&length=8&mobile_type=iOS&partnerId=0x20800003&peerID=6d664e42efeb003V&peer_id=6d664e42efeb003V&peerid=6d664e42efeb003V&productID=31&product_id=31&ts=1474422183&ver=5.20.1.3255&versionCode=52001";
+    // 趣图接口
+    public static final String INTERESTING = "http://duanzi.m.xunlei.com/pic/527/2527.js";
+
 }

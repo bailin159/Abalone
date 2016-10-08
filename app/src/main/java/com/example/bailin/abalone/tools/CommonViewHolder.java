@@ -1,9 +1,6 @@
 package com.example.bailin.abalone.tools;
 
 import android.support.v7.widget.RecyclerView;
-
-import android.text.Layout;
-
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,8 +27,7 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
         return convertView;
     }
 
-    public static CommonViewHolder getHolder(View convertView, LayoutInflater inflater,
-                                             int id, ViewGroup parent) {
+    public static CommonViewHolder getHolder(View convertView, LayoutInflater inflater, int id, ViewGroup parent) {
         CommonViewHolder viewHolder;
         if (convertView == null) {
             View view = inflater.inflate(id, parent, false);
@@ -47,7 +43,6 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
         CommonViewHolder viewHolder = new CommonViewHolder(view);
         return viewHolder;
     }
-
 
     public CommonViewHolder(View convertView) {
         super(convertView);
@@ -79,16 +74,11 @@ public class CommonViewHolder extends RecyclerView.ViewHolder {
         textView.setText(text);
     }
 
-
-
     // 设置图片
     public void setImage(int id, String imgUrl) {
         ImageView imageView = getView(id);
         Glide.with(MyApp.getContext()).load(imgUrl).into(imageView);
     }
-
-
-
 
     public View setClick(int id) {
         View view = getView(id);

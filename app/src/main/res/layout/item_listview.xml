@@ -3,11 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/lv_overall"
+    <com.example.bailin.abalone.tools.MySwipeRefreshLayout
         android:layout_width="match_parent"
+        android:id="@+id/srl_shangla"
         android:layout_height="match_parent">
 
-    </ListView>
+        <ListView
+            android:id="@+id/lv_overall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </com.example.bailin.abalone.tools.MySwipeRefreshLayout>
+
+
 
 </LinearLayout>

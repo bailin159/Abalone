@@ -22,6 +22,11 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
         convertViewId = id;
     }
 
+    public void setBeanList(List<T> beanList) {
+        this.beanList = beanList;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getCount() {
         return beanList == null ? 0 : beanList.size();

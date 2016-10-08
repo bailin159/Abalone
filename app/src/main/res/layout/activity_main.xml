@@ -55,7 +55,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:gravity="center"
-            android:text="客服"
+            android:text="推荐"
             android:textColor="@color/color_radiobutton"
             android:textSize="11sp" />
 

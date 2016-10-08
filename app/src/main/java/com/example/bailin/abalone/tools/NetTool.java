@@ -2,6 +2,7 @@ package com.example.bailin.abalone.tools;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -22,7 +23,7 @@ public class NetTool {
         mHandler = new Handler(Looper.getMainLooper());
     }
 
-    public <T> void getData(String url, final Class<T> tClass, final NetInterface<T> netInterface) {
+    public <T> void getData(final String url, final Class<T> tClass, final NetInterface<T> netInterface) {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
@@ -34,10 +35,11 @@ public class NetTool {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Gson gson = new Gson();
-                mHandler.post(new HandlerRunnable(gson.fromJson(response.body().string(), tClass), netInterface));
+                HandlerRunnable<T> handlerRunnable = new HandlerRunnable<T>
+                        (gson.fromJson(response.body().string(), tClass), netInterface);
+                mHandler.post(handlerRunnable);
             }
         });
-
     }
 
     class HandlerRunnable<T> implements Runnable {
@@ -54,7 +56,6 @@ public class NetTool {
             netInterface.onSuccess(t);
         }
     }
-
 
     public interface NetInterface<T> {
         void onSuccess(T t); // 网络请求成功 返回的是解析完成的实体类
