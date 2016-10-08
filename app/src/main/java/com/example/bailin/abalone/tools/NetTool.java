@@ -35,8 +35,10 @@ public class NetTool {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Gson gson = new Gson();
+                String s = response.body().string();
+                Log.d("NetTool", s);
                 HandlerRunnable<T> handlerRunnable = new HandlerRunnable<T>
-                        (gson.fromJson(response.body().string(), tClass), netInterface);
+                        (gson.fromJson(s, tClass), netInterface);
                 mHandler.post(handlerRunnable);
             }
         });

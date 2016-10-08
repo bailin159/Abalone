@@ -50,7 +50,7 @@ public class InterestingFragment extends BaseFragment {
                                 Glide.with(MyApp.getContext()).load(infoListBean.getUrl()).error(R.mipmap.ic_launcher).into(iv);
                             }
                             tv.setText(infoListBean.getContent());
-                            Log.d("InterestingFragment", infoListBean.getTitle());
+
                         }
                     }
                 });

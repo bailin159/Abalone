@@ -41,11 +41,11 @@ public class ServiceFragment extends BaseFragment {
         VPAdapter adapter = new VPAdapter(getChildFragmentManager());
         ArrayList<String> strings = new ArrayList<>();
         strings.add("精选");
-        strings.add("短片");
+
         strings.add("趣图");
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new SelectionFragment());
-        fragments.add(new ShortVideoFragment());
+
         fragments.add(new InterestingFragment());
         adapter.setFragments(fragments);
         adapter.setStrings(strings);
