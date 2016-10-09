@@ -5,10 +5,8 @@ import android.content.Context;
 
 import com.example.bailin.abalone.tools.citylist.DBManager;
 
-
-import io.vov.vitamio.Vitamio;
-
 import cn.bmob.v3.Bmob;
+import io.vov.vitamio.Vitamio;
 
 
 /**
@@ -26,8 +24,15 @@ public class MyApp extends Application {
         dbHelper = new DBManager(this);
         dbHelper.openDatabase();
 
+
         Vitamio.isInitialized(this);
 
+         mContext= this;
+        // 初始化BmobSDK
+        Bmob.initialize(this, "ac51df24e2f4feeca5b972599cb7a1a1");
+
+
+        Vitamio.isInitialized(this);
          mContext= this;
         // 初始化BmobSDK
         Bmob.initialize(this, "ac51df24e2f4feeca5b972599cb7a1a1");
