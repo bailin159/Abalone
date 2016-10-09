@@ -38,7 +38,7 @@ public class MyApp extends Application {
          mContext= this;
         // 初始化BmobSDK
         Bmob.initialize(this, "ac51df24e2f4feeca5b972599cb7a1a1");
-        
+
     }
 
     public static Context getContext() {
