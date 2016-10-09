@@ -83,9 +83,11 @@ public class RecentlyVideoFragment extends BaseFragment {
             public void onSuccess(final RecentlyFilmBean recentlyFilmBean) {
                 GridLayoutManager manager = new GridLayoutManager(MyApp.getContext(), 1);
                 videoRecentlyRv.setLayoutManager(manager);
+                try{
                 videoRecentlyRv.setAdapter(new RecycleViewAdapter<RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean>
                         (recentlyFilmBean.getResult().getData().get(0).getData(),
                                 MyApp.getContext(), R.layout.item_video_recycler) {
+
 
                     @Override
                     public void setData(final RecentlyFilmBean.ResulttBean.DataiBean.DataiteBean dataiteBean, CommonViewHolder viewHolder) {
@@ -113,6 +115,9 @@ public class RecentlyVideoFragment extends BaseFragment {
                     }
                 });
 
+                }catch (Exception e){
+
+                }
             }
         });
 
